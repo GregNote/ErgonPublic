@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="pl.garedgame.game.fragments.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/mainMenu_to_worldMapFragment"
+            app:destination="@id/worldMapFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/mainMenu_to_optionsFragment"
+            app:destination="@id/optionsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/mainMenu_to_newGameFragment"
+            app:destination="@id/newGameFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/mainMenu_to_versusSkirmishFragment"
+            app:destination="@id/skirmishLobbyFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/mainMenu_to_creditsFragment"
+            app:destination="@id/creditsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/worldMapFragment"
+        android:name="pl.garedgame.game.fragments.WorldMapFragment"
+        android:label="fragment_world_map"
+        tools:layout="@layout/fragment_world_map" >
+        <action
+            android:id="@+id/worldMap_to_baseFragment"
+            app:destination="@id/baseFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="pl.garedgame.game.fragments.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" />
+    <fragment
+        android:id="@+id/skirmishFragment"
+        android:name="pl.garedgame.game.fragments.SkirmishFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_skirmish" >
+        <argument
+            android:name="skirmishType"
+            app:argType="string" />
+        <argument
+            android:name="squadIds"
+            app:argType="long[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="pl.garedgame.game.fragments.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+        <action
+            android:id="@+id/base_to_squadsFragment"
+            app:destination="@id/squadsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/base_to_personnelFragment"
+            app:destination="@id/personnelFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/base_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/base_to_researchFragment"
+            app:destination="@id/projectsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/base_to_productionFragment"
+            app:destination="@id/productionFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+        <action
+            android:id="@+id/base_to_missionsFragment"
+            app:destination="@id/missionsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+    </fragment>
+    <fragment
+        android:id="@+id/squadsFragment"
+        android:name="pl.garedgame.game.fragments.SquadsFragment"
+        android:label="fragment_squads"
+        tools:layout="@layout/fragment_squads" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/personnelFragment"
+        android:name="pl.garedgame.game.fragments.PersonnelFragment"
+        android:label="fragment_personnel"
+        tools:layout="@layout/fragment_personnel" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFragment"
+        android:name="pl.garedgame.game.fragments.NewGameFragment"
+        android:label="fragment_new_game"
+        tools:layout="@layout/fragment_new_game" >
+        <action
+            android:id="@+id/newGame_to_worldMapFragment"
+            app:destination="@id/worldMapFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop"
+            app:popUpTo="@id/newGameFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="pl.garedgame.game.fragments.ResearchFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_research" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="pl.garedgame.game.fragments.VehiclesFragment"
+        android:label="fragment_vehicles"
+        tools:layout="@layout/fragment_vehicles" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/productionFragment"
+        android:name="pl.garedgame.game.fragments.ProductionFragment"
+        android:label="fragment_production"
+        tools:layout="@layout/fragment_production" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/missionsFragment"
+        android:name="pl.garedgame.game.fragments.MissionsFragment"
+        android:label="fragment_costs"
+        tools:layout="@layout/fragment_missions" >
+        <argument
+            android:name="baseId"
+            app:argType="long" />
+        <action
+            android:id="@+id/missions_to_skirmishFragment"
+            app:destination="@id/skirmishFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop" />
+    </fragment>
+    <fragment
+        android:id="@+id/skirmishLobbyFragment"
+        android:name="pl.garedgame.game.fragments.SkirmishLobbyFragment"
+        android:label="fragment_skirmish_lobby"
+        tools:layout="@layout/fragment_skirmish_lobby" >
+        <argument
+            android:name="skirmishType"
+            app:argType="string" />
+        <action
+            android:id="@+id/skirmishLobby_to_skirmishFragment"
+            app:destination="@id/skirmishFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/nav_exit"
+            app:popEnterAnim="@anim/nav_enter_pop"
+            app:popExitAnim="@anim/nav_exit_pop"
+            app:popUpTo="@id/skirmishLobbyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="pl.garedgame.game.fragments.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" />
+    <fragment
+        android:id="@+id/debugFragment"
+        android:name="pl.garedgame.game.fragments.DebugFragment"
+        android:label="fragment_debug"
+        tools:layout="@layout/fragment_debug" />
+    <action
+        android:id="@+id/to_debugFragment"
+        app:destination="@id/debugFragment"
+        app:enterAnim="@anim/nav_enter"
+        app:exitAnim="@anim/nav_exit"
+        app:popEnterAnim="@anim/nav_enter_pop"
+        app:popExitAnim="@anim/nav_exit_pop" />
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="pl.garedgame.game.fragments.EditorFragment"
+        android:label="fragment_editor"
+        tools:layout="@layout/fragment_editor" />
+    <action
+        android:id="@+id/to_editorFragment"
+        app:destination="@id/editorFragment"
+        app:enterAnim="@anim/nav_enter"
+        app:exitAnim="@anim/nav_exit"
+        app:popEnterAnim="@anim/nav_enter_pop"
+        app:popExitAnim="@anim/nav_exit_pop" />
+    <fragment
+        android:id="@+id/behaviorFragment"
+        android:name="pl.garedgame.game.fragments.BehaviorFragment"
+        android:label="fragment_editor"
+        tools:layout="@layout/fragment_behavior">
+        <argument
+            android:name="unitId"
+            app:argType="long" />
+    </fragment>
+    <action
+        android:id="@+id/to_behaviorFragment"
+        app:destination="@id/behaviorFragment"
+        app:enterAnim="@anim/nav_enter"
+        app:exitAnim="@anim/nav_exit"
+        app:popEnterAnim="@anim/nav_enter_pop"
+        app:popExitAnim="@anim/nav_exit_pop" />
+</navigation>

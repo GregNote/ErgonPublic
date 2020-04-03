@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang">PL</string>
+    <string name="created_by_lbl">Stworzone przez</string>
+    <string name="created_by">Kinga Przypis i Grzegorz Przypis</string>
+
+    <string name="mm_new_game">Nowa Gra</string>
+    <string name="mm_continue">Kontynuuj</string>
+    <string name="mm_skirmish">Potyczka</string>
+    <string name="mm_multi_player">Multi</string>
+    <string name="mm_credits">Twórcy</string>
+    <string name="mm_options">Opcje</string>
+
+    <string name="startNewGame">Start</string>
+    <string name="organisation_name">Nazwa organizacji</string>
+    <string name="needToPickNPersons">Musisz wybrać %1$d ludzi</string>
+    <string name="needToPickNPersonsCurrent">Musisz wybrać %1$d ludzi (%2$d/%1$d)</string>
+
+    <string name="joinGame">Dołącz do gry</string>
+    <string name="hostGame">Załóż grę</string>
+    <string name="startGame">Zacznij grę</string>
+    <string name="messageHint">Wiadomość</string>
+
+    <string name="music_volume">Głośność muzyki</string>
+    <string name="gui_volume">Głośność interfejsu</string>
+    <string name="effects_volume">Głośność efektów</string>
+    <string name="delete_saved_game">usuń zapisaną grę</string>
+    <string name="set_default">ustaw domyślne</string>
+
+    <string name="errorLog">Wystąpił błąd: %1$s</string>
+    <string name="noWifiLog">Brak połączenia WIFI</string>
+    <string name="serverStartLog">Serwer wystartował pod adresem %1$s</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="create">Stwórz</string>
+    <string name="delete">Usuń</string>
+
+    <string name="setNameDescription">Podaj nazwe</string>
+
+    <string name="createOrJoinDescription">Chcesz stworzyć grę czy dołączyć do instniejącej?</string>
+    <string name="createOrJoin_create">Stwórz</string>
+    <string name="createOrJoin_join">Dołącz</string>
+
+    <string name="skirmishTypeDescription">Grę prywatną (tylko z komputerem), czy publiczną (w sieci lokalne)</string>
+    <string name="skirmishType_private">Prywatna</string>
+    <string name="skirmishType_public">Publiczna</string>
+
+    <string name="hostIpDescription">Podaj ip gospodarza</string>
+
+    <string name="weapon1">Pierwsza broń</string>
+    <string name="weapon2">Druga broń</string>
+    <string name="armor">Pancerz</string>
+    <string name="usable">Użytkowe</string>
+    <string name="equipment">%1$s (%2$s)</string>
+</resources>

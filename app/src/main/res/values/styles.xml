@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- APPLICATION -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ACTIVITY -->
+    <style name="AppFullScreenTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/repeat_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- TEXT / BUTTON -->
+    <style name="MainMenuButton">
+        <item name="android:textSize">@dimen/bigText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/pb_diamond</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NormalButton">
+        <item name="android:textSize">@dimen/regularText</item>
+        <item name="android:fontFamily">@font/pb_dot</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="HeaderText" parent="NormalText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/regularText</item>
+    </style>
+
+    <style name="CenterNameText" parent="HeaderText">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/primary_dark_framed</item>
+        <item name="android:layout_width">151dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="NormalText">
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:fontFamily">@font/pb_minus</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NormalEdit">
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:fontFamily">@font/pb_plus</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textColorHint">@color/silver</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="GameUnitNameText" parent="NormalText">
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <!-- OTHER -->
+    <style name="ShowHideArrows">
+        <item name="android:src">@drawable/ui_arrows</item>
+        <item name="android:scaleX">2.0</item>
+        <item name="android:scaleY">2.0</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SkillIcon">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+    </style>
+
+    <style name="SkillView">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">10dp</item>
+    </style>
+
+    <style name="SortView">
+        <item name="android:layout_width">151dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditorButton">
+        <item name="android:fontFamily">@font/pb_plus</item>
+        <item name="android:textSize">@dimen/regularText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+</resources>

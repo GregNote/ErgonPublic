@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        style="@style/NormalButton"
+        android:id="@+id/addNew"
+        android:text="@string/create"
+        android:background="@drawable/primary_framed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/NormalButton"
+        android:id="@+id/remove"
+        android:text="@string/delete"
+        android:background="@drawable/primary_framed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addNew"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/squads"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:listitem="@layout/list_item_squad"
+        app:layout_constraintTop_toBottomOf="@id/addNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/squadName"
+        style="@style/CenterNameText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="SquadName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currentSquadMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/list_item_person"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/squads"
+        app:layout_constraintEnd_toStartOf="@id/availablePersonnel"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <pl.garedgame.game.ui.PersonSortView
+        android:id="@+id/sortView"
+        style="@style/SortView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/availablePersonnel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:listitem="@layout/list_item_person"
+        app:layout_constraintTop_toBottomOf="@id/sortView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</merge>

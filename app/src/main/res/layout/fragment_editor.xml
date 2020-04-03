@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DebugFragment">
+
+    <pl.garedgame.game.ui.GameSceneView
+        android:id="@+id/gameScene"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:columnCount="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/upBtn"
+            style="@style/EditorButton"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="▲"/>
+
+        <TextView
+            android:id="@+id/optionBtn"
+            style="@style/EditorButton"
+            android:text="≡"/>
+
+        <TextView
+            android:id="@+id/leftBtn"
+            style="@style/EditorButton"
+            android:layout_row="2"
+            android:text="◄"/>
+
+        <TextView
+            android:id="@+id/cancelBtn"
+            style="@style/EditorButton"
+            android:text="✗"/>
+
+        <TextView
+            android:id="@+id/rightBtn"
+            style="@style/EditorButton"
+            android:text="►"/>
+
+        <TextView
+            android:id="@+id/deleteBtn"
+            style="@style/EditorButton"
+            android:text="D"/>
+
+        <TextView
+            android:id="@+id/downBtn"
+            style="@style/EditorButton"
+            android:layout_column="1"
+            android:text="▼"/>
+
+        <TextView
+            android:id="@+id/copyBtn"
+            style="@style/EditorButton"
+            android:text="C"/>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/sceneOptions"
+        style="@style/NormalButton"
+        android:text="Scene"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addableObjects"
+        android:background="@drawable/primary_framed"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sceneOptions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grid"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/gameObjectsSwipe"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gameObjects"
+            android:background="@drawable/primary_framed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/sceneOptionsLayout"
+        android:background="#aa888888"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#aa000000"
+            android:padding="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sceneName"
+                style="@style/NormalButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/newScene"
+                style="@style/NormalButton"
+                android:text="NewScene"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/loadScene"
+                style="@style/NormalButton"
+                android:text="LoadScene"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/saveSceneToFile"
+                style="@style/NormalButton"
+                android:text="SaveSceneToFile"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/objectOptionsLayout"
+        android:background="#aa888888"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#aa000000"
+            android:padding="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/textureSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/widthValue"
+                style="@style/NormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <SeekBar
+                android:id="@+id/widthSeekBar"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:max="39"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:theme="@style/Widget.AppCompat.SeekBar.Discrete"/>
+
+            <TextView
+                android:id="@+id/heightValue"
+                style="@style/NormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <SeekBar
+                android:id="@+id/heightSeekBar"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:max="39"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:theme="@style/Widget.AppCompat.SeekBar.Discrete"/>
+
+            <TextView
+                android:id="@+id/rotationValue"
+                style="@style/NormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <SeekBar
+                android:id="@+id/rotationSeekBar"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:max="71"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:theme="@style/Widget.AppCompat.SeekBar.Discrete"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cameraPos"
+        android:textStyle="bold"
+        android:textColor="#00ff00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gameObjectsSwipe"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

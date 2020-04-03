@@ -1,0 +1,219 @@
+{
+    "firstNamesFemale": [
+        "Kinga", "Cathy", "Jelena", "Joanna", "Emma", "Olivia", "Ava", "Isabella", "Sophia", "Ella",
+        "Luna", "Zoey", "Nora", "Eva", "Aria", "Maya", "Lucy", "Lasyla", "Victoria", "Violet",
+        "Ivy", "Lydia", "Emery", "Aurora", "Stella", "Vivian", "Grace", "Hannah", "Leah", "Addison"
+    ],
+    "firstNamesMale": [
+        "Grzegorz", "Franciszek", "Rafał", "Marek", "Lucas", "Maciej", "Mateusz", "Janusz", "John",
+        "Jurij", "Iwanowicz", "Andy", "Arthur", "Bobby", "Cyrus", "Denis", "Frank", "Gary", "Hugh",
+        "Dimitri", "Liam", "William", "James", "Noah", "Oliver", "Henry", "Jack", "Issac", "Jose"
+    ],
+    "lastNames": [
+        "Brown", "Nowak", "Bondos", "Przypis", "Broda", "Tetmajer", "Miller", "Wilson", "Taylor",
+        "Kowal", "Piekarz", "MacMillan", "Gorki", "Cornel", "Powell", "Brandon", "Simms", "Davis",
+        "Parker", "Peterson", "Forsyth", "Grant", "Stevens", "Gładkow", "Gonzalez", "Murphy"
+    ],
+    "baseNames": [
+        "Alfa", "Beta", "Gamma", "Delta", "Epsilon", "Dzeta", "Eta", "Theta", "Jota", "Kappa",
+        "Lambda", "My", "Ny", "Ksi", "Omikron", "Pi", "Rho", "Sigma", "Tau", "Ipsylon", "Phi",
+        "Chi", "Psi", "Omega"
+    ],
+    "skinTones": ["#ffdbac", "#f1c27d", "#e0ac69", "#c68642", "#8d5524"],
+    "hairColors": [
+        "#FFF8DC", "#FFEBCD", "#FFE4C4", "#FFDEAD", "#F5DEB3", "#DEB887", "#D2B48C", "#BC8F8F",
+        "#F4A460", "#DAA520", "#CD853F", "#D2691E", "#8B4513", "#A0522D", "#A52A2A", "#800000"],
+    "irisColors": ["#634e34", "#2e536f", "#3d671d", "#1c7847", "#497665"],
+    "shirtColors": [
+        "#444444", "#bb4444", "#44bb44", "#4444bb", "#bbbb44", "#44bbbb", "#bb44bb", "#bbbbbb"],
+
+    "equipment": [
+        {"key": "knife", "itemType": "weaponMelee",
+            "name": "Knife", "image": "",
+            "description": "Knife description",
+            "slot": "weapon",
+            "minDamage": 1, "maxDamage": 2, "range": 0.5,
+            "cost": {"time": 3600000, "prefabricats": 5}},
+
+        {"key": "pistol", "itemType": "weaponRanged",
+            "name": "Pistol", "image": "pistol",
+            "description": "Pistol description",
+            "slot": "weapon",
+            "bulletDamage": 3, "bulletCount": 1,
+            "shootCount": 1, "shootDelay": 100, "spreadAngle": 10.0,
+            "sound": "pistol_shoot",
+            "aimTime": 300, "r": 1.0, "g": 1.0, "b": 0.0,
+            "cost": {"time": 3600000, "prefabricats": 5}},
+        {"key": "assault_rifle", "itemType": "weaponRanged",
+            "name": "Assault Rifle", "image": "assault_rifle",
+            "description": "Assault Rifle description",
+            "slot": "weapon",
+            "bulletDamage": 4, "bulletCount": 1,
+            "shootCount": 3, "shootDelay": 80, "spreadAngle": 15.0,
+            "sound": "rifle_shoot",
+            "aimTime": 400, "r": 0.0, "g": 1.0, "b": 0.0,
+            "cost": {"time": 3600000, "prefabricats": 20}},
+        {"key": "shotgun", "itemType": "weaponRanged",
+            "name": "Shotgun", "image": "shotgun",
+            "description": "Shotgun description",
+            "slot": "weapon",
+            "bulletDamage": 4, "bulletCount": 5,
+            "shootCount": 1, "shootDelay": 300, "spreadAngle": 30.0,
+            "sound": "shotgun_shoot",
+            "aimTime": 400, "r": 1.0, "g": 0.0, "b": 0.0,
+            "cost": {"time": 3600000, "prefabricats": 25}},
+
+        {"key": "kevlar_vest", "itemType": "armor",
+            "name": "Kevlar vest", "image": "kevlar_vest",
+            "description": "Kevlar armor description",
+            "slot": "armor",
+            "armor": 1, "speed": 0.0,
+            "cost": {"time": 3600000, "prefabricats": 30}},
+        {"key": "light_kevlar_armor", "itemType": "armor",
+            "name": "Kevlar armor", "image": "light_kevlar_armor.png",
+            "description": "Harness armor description",
+            "slot": "armor",
+            "armor": 2, "speed": -1.0,
+            "cost": {"time": 3600000, "prefabricats": 30}},
+        {"key": "heavy_kevlar_armor", "itemType": "armor",
+            "name": "Heavy kevlar armor", "image": "heavy_kevlar_armor",
+            "description": "Spider armor description",
+            "slot": "armor",
+            "armor": 3, "speed": -2.0,
+            "cost": {"time": 3600000, "prefabricats": 30}},
+
+        {"key": "medkit", "itemType": "usable",
+            "name": "Medkit", "image": "medkit",
+            "description": "Medkit description",
+            "slot": "utility",
+            "loads": 3, "duration": 1200, "health": 4,
+            "cost": {"time": 3600000, "prefabricats": 10}},
+
+        {"key": "frag_granade", "itemType": "explosive",
+            "name": "Frag grenade", "image": "frag_granade",
+            "description": "Frag grenade description",
+            "slot": "utility",
+            "damage": 3, "range": 2.0, "trigger": "throw",
+            "cost": {"time": 3600000, "prefabricats": 10}},
+        {"key": "tactical_explosive", "itemType": "explosive",
+            "name": "Tactical Explosive", "image": "tactical_explosive",
+            "description": "Tactical Explosive description",
+            "slot": "utility",
+            "damage": 5, "range": 3.0, "trigger": "timer",
+            "cost": {"time": 3600000, "prefabricats": 10}},
+        {"key": "mine", "itemType": "explosive",
+            "name": "Mine", "image": "tactical_explosive",
+            "description": "Tactical Explosive description",
+            "slot": "utility",
+            "damage": 4, "range": 1.0, "trigger": "mine",
+            "cost": {"time": 3600000, "prefabricats": 10}},
+
+        {"key": "test_research_item", "itemType": "other",
+            "name": "Test research item", "image": "",
+            "description": "Test research item description",
+            "requiredResearch": ["Test 2"],
+            "cost": {"time": 3600000, "prefabricats": 30}}
+    ],
+    "researches": [
+        {"key": "test_1",
+            "name": "Test 1",
+            "description": "Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "test_2",
+            "name": "Test 2",
+            "description": "Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description",
+            "cost": {
+                "time": 3600000,
+                "requiredItems": ["Test item 1", "Test item 2", "Test item 3"]
+            }},
+        {"key": "test_3",
+            "name": "Test 3",
+            "description": "Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description",
+            "requiredResearch": ["Test 2"],
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "test_4",
+            "name": "Test 4",
+            "description": "Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description Recon suit MK1 description",
+            "time": 3600000,
+            "requiredResearch": ["Test 2", "Test 3"],
+            "cost": {
+                "time": 3600000
+            }}
+    ],
+    "buildings": [
+        {"key": "depot",
+            "name": "Depot", "type": "Other", "energyBalance": 0, "personnelCapacity": 1, "image": "base_depot.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "warehouse",
+            "name": "Warehouse", "type": "Other", "energyBalance": 0, "personnelCapacity": 1, "image": "base_warehouse.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "lab",
+            "name": "Lab", "type": "Research", "energyBalance": -15, "personnelCapacity": 6, "image": "base_lab.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "barracks",
+            "name": "Barracks", "type": "Other", "energyBalance": 0, "personnelCapacity": 6, "image": "base_barracks.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "armoury",
+            "name": "Armoury", "type": "Other", "energyBalance": 0, "personnelCapacity": 6, "image": "base_armoury.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "workshop",
+            "name": "Workshop", "type": "Production", "energyBalance": -15, "personnelCapacity": 6, "image": "base_workshop.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "factory",
+            "name": "Factory", "type": "Production", "energyBalance": -30, "personnelCapacity": 6, "image": "base_factory.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "radio_tower",
+            "name": "Radio tower", "type": "Other", "energyBalance": -5, "personnelCapacity": 1, "image": "base_radio_tower.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "teleport",
+            "name": "Teleport", "type": "Other", "energyBalance": -10, "personnelCapacity": 6, "image": "base_teleport.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "oil_mine",
+            "name": "Oil mine", "type": "Other", "energyBalance": 0, "personnelCapacity": 0, "image": "base_oil_mine.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "cristal_mine",
+            "name": "Cristal mine", "type": "Other", "energyBalance": 0, "personnelCapacity": 0, "image": "base_cristal_mine.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "solar_power",
+            "name": "Solar power", "type": "Other", "energyBalance": 15, "personnelCapacity": 0, "image": "base_solar_power.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "oil_power",
+            "name": "Oil power", "type": "Other", "energyBalance": 20, "personnelCapacity": 0, "image": "base_oil_power.png",
+            "cost": {
+                "time": 3600000
+            }},
+        {"key": "cristal_reactor",
+            "name": "Cristal reactor", "type": "Other", "energyBalance": 30, "personnelCapacity": 0, "image": "base_cristal_reactor.png",
+            "cost": {
+                "time": 3600000
+            }}
+    ]
+}

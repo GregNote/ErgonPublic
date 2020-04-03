@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="base"
+            type="pl.garedgame.game.objects.Base" />
+        <variable
+            name="isSmall"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/primary_framed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <pl.garedgame.game.ui.BaseView
+            android:id="@+id/baseView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:updateBase="@{base}"
+            app:layout_constraintDimensionRatio="h,400:433"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/baseName"
+            style="@style/HeaderText"
+            android:text="@{base.name}"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toTopOf="@id/baseView"
+            app:layout_constraintStart_toEndOf="@id/baseView" />
+
+        <TextView
+            android:id="@+id/prefabricats"
+            style="@style/NormalText"
+            app:value="@{base.prefabricats}"
+            android:layout_width="60dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@id/baseName"
+            app:layout_constraintStart_toEndOf="@id/baseView" />
+
+        <TextView
+            android:id="@+id/platinum"
+            style="@style/NormalText"
+            app:value="@{base.platinum}"
+            android:layout_width="60dp"
+            app:layout_constraintTop_toBottomOf="@id/baseName"
+            app:layout_constraintStart_toEndOf="@id/prefabricats" />
+
+        <TextView
+            android:id="@+id/titanium"
+            style="@style/NormalText"
+            app:value="@{base.titanium}"
+            android:layout_width="60dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@id/prefabricats"
+            app:layout_constraintStart_toEndOf="@id/baseView" />
+
+        <TextView
+            android:id="@+id/ergon"
+            style="@style/NormalText"
+            app:value="@{base.ergon}"
+            android:layout_width="60dp"
+            app:layout_constraintTop_toBottomOf="@id/prefabricats"
+            app:layout_constraintStart_toEndOf="@id/titanium" />
+
+        <TextView
+            android:id="@+id/personnel"
+            style="@style/NormalText"
+            app:value="@{base.personelCount}"
+            android:layout_width="60dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toBottomOf="@id/titanium"
+            app:layout_constraintStart_toEndOf="@id/baseView" />
+
+        <TextView
+            android:id="@+id/energy"
+            style="@style/NormalText"
+            android:text="@{base.energyState}"
+            android:layout_width="60dp"
+            app:layout_constraintTop_toBottomOf="@id/titanium"
+            app:layout_constraintStart_toEndOf="@id/personnel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

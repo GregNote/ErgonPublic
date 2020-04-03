@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+
+    def getDate = { ->
+        def date = new Date()
+        def formattedDate = date.format('yyyyMMdd')
+        return formattedDate
+    }
+
+    def getGitHash = { ->
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-parse', '--short', 'HEAD'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Ergon_${getDate()}_${getGitHash()}.apk"
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "pl.garedgame.game"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.0.1"
+        buildConfigField "String", "GitHash", "\"${getGitHash()}\""
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        buildTypes.all {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+        }
+        debug {
+            debuggable = true
+        }
+    }
+}
+
+dependencies {
+
+    def support_version = "28.0.0"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation "com.android.support:support-compat:$support_version"
+    implementation "com.android.support:support-v4:$support_version"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    def kotlinX_version = '1.3.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinX_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinX_version"
+
+    implementation group: 'org.danilopianini', name: 'gson-extras', version: '0.2.2'
+
+    def nav_version = "1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
+
+    implementation 'com.squareup.leakcanary:leaksentry:2.0-alpha-2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    kapt 'com.android.databinding:compiler:3.1.4'
+}
+
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainMenuFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:fontFamily="@font/road_test"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textColor="@color/lightBlue"
+        android:textSize="86sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/newGameButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/continueButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_continue"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/newGameButton" />
+
+    <TextView
+        android:id="@+id/newGameButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_new_game"
+        app:layout_constraintTop_toBottomOf="@id/continueButton"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/skirmishButton" />
+
+    <TextView
+        android:id="@+id/skirmishButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_skirmish"
+        app:layout_constraintTop_toBottomOf="@id/newGameButton"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/multiPlayerButton" />
+
+    <TextView
+        android:id="@+id/multiPlayerButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_multi_player"
+        app:layout_constraintTop_toBottomOf="@id/skirmishButton"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/creditsButton" />
+
+    <TextView
+        android:id="@+id/creditsButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_credits"
+        app:layout_constraintTop_toBottomOf="@id/multiPlayerButton"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/optionsButton" />
+
+    <TextView
+        android:id="@+id/optionsButton"
+        style="@style/MainMenuButton"
+        android:text="@string/mm_options"
+        app:layout_constraintTop_toBottomOf="@id/creditsButton"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/title" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>

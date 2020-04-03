@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang">EN</string>
+    <string name="app_name" translatable="false">Ergon</string>
+    <string name="created_by_lbl">Created by</string>
+    <string name="created_by">Kinga Przypis and Grzegorz Przypis</string>
+
+    <string name="mm_new_game">New Game</string>
+    <string name="mm_continue">Continue</string>
+    <string name="mm_skirmish">Skirmish</string>
+    <string name="mm_multi_player">Multi</string>
+    <string name="mm_credits">Credits</string>
+    <string name="mm_options">Options</string>
+
+    <string name="startNewGame">Start</string>
+    <string name="organisation_name">Organisation name</string>
+    <string name="needToPickNPersons">Must choose %1$d units</string>
+    <string name="needToPickNPersonsCurrent">Must choose %1$d units (%2$d/%1$d)</string>
+
+    <string name="joinGame">Join game</string>
+    <string name="hostGame">Create game</string>
+    <string name="startGame">Start game</string>
+    <string name="messageHint">Message</string>
+
+    <string name="music_volume">Music volume</string>
+    <string name="gui_volume">Gui volume</string>
+    <string name="effects_volume">Effects volume</string>
+    <string name="delete_saved_game">delete saved game</string>
+    <string name="set_default">set default</string>
+
+    <string name="errorLog">Error occurred: %1$s</string>
+    <string name="noWifiLog">No WIFI connection</string>
+    <string name="serverStartLog">Server start at %1$s ip</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+
+    <string name="setNameDescription">Type name</string>
+
+    <string name="createOrJoinDescription">Do you want create new or join existing</string>
+    <string name="createOrJoin_create">Create</string>
+    <string name="createOrJoin_join">Join</string>
+
+    <string name="skirmishTypeDescription">Private game (with AI),\nor public (in LAN)</string>
+    <string name="skirmishType_private">Private</string>
+    <string name="skirmishType_public">Public</string>
+
+    <string name="hostIpDescription">Type host ip</string>
+
+    <string name="weapon1">First weapon</string>
+    <string name="weapon2">Second Weapon</string>
+    <string name="armor">Armor</string>
+    <string name="usable">Usable</string>
+    <string name="equipment">%1$s (%2$s)</string>
+</resources>

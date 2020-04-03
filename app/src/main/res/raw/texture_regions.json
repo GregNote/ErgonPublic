@@ -1,0 +1,199 @@
+{
+  "regions": [
+    {
+      "name": "brown_dirt_1",
+      "texturePath": "terrain.png",
+      "x": 0.0, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "brown_dirt_2",
+      "texturePath": "terrain.png",
+      "x": 0.25, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "gray_dirt_1",
+      "texturePath": "terrain.png",
+      "x": 0.5, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "gray_dirt_2",
+      "texturePath": "terrain.png",
+      "x": 0.75, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "tiles_1",
+      "texturePath": "terrain.png",
+      "x": 0.0, "y": 0.5,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "tiles_2",
+      "texturePath": "terrain.png",
+      "x": 0.25, "y": 0.5,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "flor",
+      "texturePath": "terrain.png",
+      "x": 0.5, "y": 0.5,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "spawn",
+      "texturePath": "terrain.png",
+      "x": 0.75, "y": 0.5,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "wall",
+      "texturePath": "objects.png",
+      "x": 0.0, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "gray_wall",
+      "texturePath": "objects.png",
+      "x": 0.25, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+    {
+      "name": "box",
+      "texturePath": "objects.png",
+      "x": 0.5, "y": 0.0,
+      "w": 0.25, "h": 0.5
+    },
+
+
+    {
+      "name": "soldier",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "engineer",
+      "texturePath": "units.png",
+      "x": 0.0625, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "mechanic",
+      "texturePath": "units.png",
+      "x": 0.125, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "scientist",
+      "texturePath": "units.png",
+      "x": 0.1875, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "none",
+      "texturePath": "units.png",
+      "x": 0.25, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "corpses",
+      "texturePath": "units.png",
+      "x": 0.3125, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "warn",
+      "texturePath": "units.png",
+      "x": 0.375, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+
+    {
+      "name": "dest",
+      "texturePath": "units.png",
+      "x": 0.4375, "y": 0.0,
+      "w": 0.0625, "h": 0.0625
+    },
+    {
+      "name": "selection",
+      "texturePath": "units.png",
+      "x": 0.5, "y": 0.0,
+      "w": 0.125, "h": 0.125
+    },
+    {
+      "name": "self",
+      "texturePath": "units.png",
+      "x": 0.625, "y": 0.0,
+      "w": 0.125, "h": 0.125
+    },
+    {
+      "name": "ally",
+      "texturePath": "units.png",
+      "x": 0.75, "y": 0.0,
+      "w": 0.125, "h": 0.125
+    },
+    {
+      "name": "enemy",
+      "texturePath": "units.png",
+      "x": 0.875, "y": 0.0,
+      "w": 0.125, "h": 0.125
+    },
+    {
+      "name": "neutral",
+      "texturePath": "units.png",
+      "x": 0.875, "y": 0.125,
+      "w": 0.125, "h": 0.125
+    },
+    {
+      "name": "heavy_kevlar_armor",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.25,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "light_kevlar_armor",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.28125,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "kevlar_vest",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.3125,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "assault_rifle",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.34375,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "shotgun",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.375,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "pistol",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.40625,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "medkit",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.4375,
+      "w": 0.0625, "h": 0.03125
+    },
+    {
+      "name": "frag_granade",
+      "texturePath": "units.png",
+      "x": 0.0, "y": 0.46875,
+      "w": 0.0625, "h": 0.03125
+    }
+  ]
+}
